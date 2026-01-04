@@ -6,19 +6,17 @@ function App() {
 
   return (
     <div style={{
-      position: 'relative', height: '100vh', overflow: 'hidden'
+      height: '100vh', overflow: 'hidden',
+      display: "flex", justifyContent: 'start'
     }}>
-      <RandomPage />
       <StarAnimation />
       <div style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        height: '100vh',
+        height: '100%',
         width: '50vw',
       }}>
         <Globe />
       </div>
+      {/* <RandomPage /> */}
 
 
     </div>
