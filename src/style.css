@@ -1,0 +1,33 @@
+body {
+   background-color: black;
+}
+
+@keyframes starsFast {
+   from {
+      transform: translate(0, 0);
+   }
+
+   to {
+      transform: translate(0, -2000px);
+   }
+}
+
+@keyframes starsDiagonal {
+   from {
+      transform: translate(0, 0);
+   }
+
+   to {
+      transform: translate(-1000px, -2000px);
+   }
+}
+
+@keyframes starsSlow {
+   from {
+      transform: translate(0, 0);
+   }
+
+   to {
+      transform: translate(500px, -1500px);
+   }
+}
