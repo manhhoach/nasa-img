@@ -1,38 +1,44 @@
-/* eslint-disable react-hooks/purity */
-
 export default function StarAnimation() {
-   return <>
-      <div style={{
-         position: 'absolute',
-         width: '2px',
-         height: '2px',
-         background: 'white',
-         boxShadow: Array.from({ length: 120 })
-            .map(() => `${Math.random() * 2000}px ${Math.random() * 2000}px white`)
-            .join(','),
-         animation: 'starsFast 80s linear infinite'
-      }} />
-      <div style={{
-         position: 'absolute',
-         width: '2px',
-         height: '2px',
-         background: 'white',
-         boxShadow: Array.from({ length: 200 })
-            .map(() => `${Math.random() * 2000}px ${Math.random() * 2000}px white`)
-            .join(','),
-         animation: 'starsDiagonal 100s linear infinite',
-         opacity: 0.8
-      }} />
-      <div style={{
-         position: 'absolute',
-         width: '1px',
-         height: '1px',
-         background: 'white',
-         boxShadow: Array.from({ length: 300 })
-            .map(() => `${Math.random() * 2000}px ${Math.random() * 2000}px white`)
-            .join(','),
-         animation: 'starsSlow 140s linear infinite',
-         opacity: 0.6
-      }} />
-   </>
+   const stars = (count: number) =>
+      Array.from({ length: count })
+         .map(() => `${Math.random() * 100}vw ${Math.random() * 100}vh white`)
+         .join(',')
+
+   const layer = (size: number, count: number, opacity: number) => (
+      <>
+         <div
+            style={{
+               position: 'absolute',
+               left: 0,
+               top: 0,
+               width: size,
+               height: size,
+               background: 'white',
+               boxShadow: stars(count),
+               animation: 'starsHorizontal 160s linear infinite',
+               opacity
+            }}
+         />
+         <div
+            style={{
+               position: 'absolute',
+               left: '100vw',
+               top: 0,
+               width: size,
+               height: size,
+               background: 'white',
+               boxShadow: stars(count),
+               animation: 'starsHorizontal 160s linear infinite',
+               opacity
+            }}
+         />
+      </>
+   )
+
+   return (
+      <>
+         {layer(2, 200, 0.8)}
+         {layer(1, 300, 0.6)}
+      </>
+   )
 }

@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div style={{
-      position: 'relative', height: '100vh',
+      position: 'relative', height: '100vh', overflow: 'hidden'
     }}>
       <RandomPage />
       <StarAnimation />
