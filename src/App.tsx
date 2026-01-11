@@ -1,19 +1,12 @@
 import Globe from "./components/Globe"
-import RandomPage from "./components/RandomPage"
 import StarAnimation from "./components/StarAnimation"
 
 function App() {
 
   return (
-    <div style={{
-      height: '100vh', overflow: 'hidden',
-      display: "flex", justifyContent: 'start'
-    }}>
+    <div className="div-container">
       <StarAnimation />
-      <div style={{
-        height: '100%',
-        width: '50vw',
-      }}>
+      <div className="div-globe">
         <Globe />
       </div>
       {/* <RandomPage /> */}

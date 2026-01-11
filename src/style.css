@@ -11,3 +11,22 @@ body {
       transform: translateX(0);
    }
 }
+
+.div-globe {
+   height: 100%;
+   width: 100vw;
+}
+
+.div-container {
+   height: 100vh;
+   overflow: hidden;
+   display: flex;
+   justify-content: start;
+   align-items: center;
+}
+
+@media (max-width:600px) {
+   .div-globe {
+      height: 50%;
+   }
+}

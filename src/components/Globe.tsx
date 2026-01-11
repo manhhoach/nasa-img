@@ -4,7 +4,7 @@ import { Suspense, useLayoutEffect } from 'react'
 
 function Earth() {
   const { scene } = useGLTF('/earth.glb')
-  const scale = 0.0055
+  const scale = 0.0058
   useLayoutEffect(() => {
     scene.position.set(0, 0, 0)
     scene.scale.set(scale, scale, scale)
